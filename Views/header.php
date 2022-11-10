@@ -21,10 +21,16 @@ session_start();
         <a class="navbar-brand" style="padding-left:15px;" href="#">LA GROSSE BOUTIQUE !</a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php?page=deconnexion">Deconnexion</a>
-                    <a class="nav-link" href="index.php?page=categories&action=GET&bonus=start-game">Start a game ?</a>
-                </li>
+                <?php
+                if(!empty($_SESSION['FK_id_role'])){
+                ?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php?page=deconnexion">Deconnexion</a>
+                        <a class="nav-link" href="index.php?page=categories&action=GET&bonus=start-game">Start a game ?</a>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
     </nav>

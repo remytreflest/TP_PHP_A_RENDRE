@@ -231,7 +231,7 @@ if(isset($_GET['page'])){
 if(isset($_GET['bonus']) && !empty($_GET['bonus']) && $_GET['bonus'] == "start-game"){
     ?>
 <script>
-document.getElementById("main-container").style.background = "no-repeat center/80% url('Assets/img/saw.jpg');"
+document.querySelector("body").style.backgroundImage="url('Assets/img/saw.jpg')"
 </script>
 <?php
 
