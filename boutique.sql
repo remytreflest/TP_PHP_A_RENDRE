@@ -99,9 +99,9 @@ INSERT INTO `role` (`id_role`, `nom`) VALUES
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(100) NOT NULL,
-  `prenom` varchar(100) NOT NULL,
-  `email` varchar(200) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `mdp` text NOT NULL,
   `FK_id_role` int(11) NOT NULL,
   PRIMARY KEY (`id_utilisateur`),
